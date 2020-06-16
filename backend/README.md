@@ -40,6 +40,12 @@ Each time you open a new terminal session, run:
 export FLASK_APP=api.py;
 ```
 
+Also set the following eenvironmental variable for Auth0
+```bash
+export AUTH0_DOMAIN='your_auth0_domain'
+export API_AUDIENCE='auth0_audience'
+```
+
 To run the server, execute:
 
 ```bash
@@ -73,7 +79,8 @@ The `--reload` flag will detect file changes and restart the server automaticall
     - Register 2 users - assign the Barista role to one and Manager role to the other.
     - Sign into each account and make note of the JWT.
     - Import the postman collection `./starter_code/backend/udacity-fsnd-udaspicelatte.postman_collection.json`
-    - Right-clicking the collection folder for barista and manager, navigate to the authorization tab, and including the JWT in the token field (you should have noted these JWTs).
+    - Right-clicking the collection folder for barista and manager, navigate to the authorization tab, and including the
+      JWT in the token field (you should have noted these JWTs).
     - Run the collection and correct any errors.
     - Export the collection overwriting the one we've included so that we have your proper JWTs during review!
 
