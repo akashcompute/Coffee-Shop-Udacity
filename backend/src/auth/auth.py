@@ -104,7 +104,6 @@ def verify_decode_jwt(token):
 
     unverified_header = jwt.get_unverified_header(token)
 
-    # Auth0 token should have a key id
     if 'kid' not in unverified_header:
         raise AuthError({
             'code': 'invalid_header',
