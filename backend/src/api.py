@@ -222,3 +222,20 @@ def internal_server_error(error):
         "error": 500,
         "message": 'Internal Server Error'
     }), 500
+
+@app.errorhandler(400)
+def bad_request(error):
+    return jsonify({
+        "success": False,
+        "error": 400,
+        "message": 'Bad Request'
+    }), 400
+
+
+@app.errorhandler(405)
+def method_not_allowed(error):
+    return jsonify({
+        "success": False,
+        "error": 405,
+        "message": 'Method Not Allowed'
+    }), 405
